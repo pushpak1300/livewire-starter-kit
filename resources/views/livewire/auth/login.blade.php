@@ -115,7 +115,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         <div class="flex items-center justify-end">
             <flux:button variant="primary" type="submit" class="w-full">
-                <span data-test="login-button">{{ __('Log in') }}</span>
+                <span data-test="login-button">HHH {{ __('Log in') }}</span>
             </flux:button>
         </div>
     </form>
