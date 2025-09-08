@@ -39,10 +39,8 @@ new #[Layout('components.layouts.auth')] class extends Component {
             placeholder="email@example.com"
         />
 
-        <flux:button variant="primary" type="submit" class="w-full">
-            <span data-test="email-password-reset-link-button">
-                {{ __('Email password reset link') }}
-            </span>
+        <flux:button variant="primary" type="submit" class="w-full" data-test="email-password-reset-link-button">
+            {{ __('Email password reset link') }}
         </flux:button>
     </form>
 
