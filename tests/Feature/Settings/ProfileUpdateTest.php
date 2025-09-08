@@ -15,7 +15,7 @@ class ProfileUpdateTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->get(route('settings.profile'))->assertOk();
+        $this->get(route('profile.edit'))->assertOk();
     }
 
     public function test_profile_information_can_be_updated(): void
@@ -24,7 +24,7 @@ class ProfileUpdateTest extends TestCase
 
         $this->actingAs($user);
 
-        $response = Volt::test('settings.profile')
+        $response = Volt::test('profile.edit')
             ->set('name', 'Test User')
             ->set('email', 'test@example.com')
             ->call('updateProfileInformation');
@@ -44,7 +44,7 @@ class ProfileUpdateTest extends TestCase
 
         $this->actingAs($user);
 
-        $response = Volt::test('settings.profile')
+        $response = Volt::test('profile.edit')
             ->set('name', 'Test User')
             ->set('email', $user->email)
             ->call('updateProfileInformation');
